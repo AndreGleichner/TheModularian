@@ -96,7 +96,7 @@ try
 
                 default:
                 {
-                    SPDLOG_ERROR("Host received invalid command {}", hostMsg.Cmd);
+                    SPDLOG_ERROR("Host received invalid command {}", static_cast<int>(hostMsg.Cmd));
                 }
             }
         }

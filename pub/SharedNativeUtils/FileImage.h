@@ -1,6 +1,6 @@
 #pragma once
 #include <Windows.h>
-#include <magic_enum.hpp>
+#include <magic_enum/magic_enum.hpp>
 
 namespace FileImage
 {

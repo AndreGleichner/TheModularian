@@ -57,11 +57,11 @@ inline std::filesystem::path PrivateDataDir(const std::wstring_view subDir = L""
     }
     catch (const wil::ResultException& ex)
     {
-        FAIL_FAST_CAUGHT_EXCEPTION_MSG("ResultException in PrivateDataDir(%ls): %s", subDir.data(), ex.what());
+        FAIL_FAST_CAUGHT_EXCEPTION_MSG("ResultException in PrivateDataDir(%ls): %hs", subDir.data(), ex.what());
     }
     catch (const std::filesystem::filesystem_error& ex)
     {
-        FAIL_FAST_MSG("filesystem_error in PrivateDataDir(%s)", ex.what());
+        FAIL_FAST_MSG("filesystem_error in PrivateDataDir(%hs)", ex.what());
     }
     catch (...)
     {

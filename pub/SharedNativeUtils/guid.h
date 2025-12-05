@@ -38,7 +38,7 @@ struct Guid final : GUID
 
     Guid(std::string_view guid)
     {
-        FAIL_FAST_IF_FAILED_MSG(Parse(guid), "Failed to parse guid '%s'", guid.data());
+        FAIL_FAST_IF_FAILED_MSG(Parse(guid), "Failed to parse guid '%hs'", guid.data());
     }
 
     Guid(PCWSTR guid)
@@ -48,7 +48,7 @@ struct Guid final : GUID
 
     Guid(PCSTR guid)
     {
-        FAIL_FAST_IF_FAILED_MSG(Parse(guid), "Failed to parse guid '%s'", guid);
+        FAIL_FAST_IF_FAILED_MSG(Parse(guid), "Failed to parse guid '%hs'", guid);
     }
 
     // formatted as "{831532DC-7EFB-4A8C-841B-7BBE21558F8F}"

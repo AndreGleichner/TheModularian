@@ -75,7 +75,7 @@ try
     const auto c = json::parse(msg).get<ipc::ConfStore>();
     if (c.Cmd != ipc::ConfStore::Cmd::Query && c.Cmd != ipc::ConfStore::Cmd::Update)
     {
-        SPDLOG_ERROR("Invalid ConfStore command {}", c.Cmd);
+        SPDLOG_ERROR("Invalid ConfStore command {}", static_cast<int>(c.Cmd));
         return E_INVALIDARG;
     }
 

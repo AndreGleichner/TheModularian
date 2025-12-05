@@ -6,7 +6,7 @@
 #include <vector>
 
 #include <wil/resource.h>
-#include <magic_enum.hpp>
+#include <magic_enum/magic_enum.hpp>
 using namespace magic_enum::bitwise_operators;
 
 namespace

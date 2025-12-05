@@ -507,7 +507,7 @@ void ServiceBase::SetServiceStatus(State state)
     else
         Status.dwControlsAccepted = (DWORD)Traits.AcceptControls | SERVICE_ACCEPT_STOP;
 
-    SPDLOG_INFO(L"-> {} accept:{:#x}", state, Status.dwControlsAccepted);
+    SPDLOG_INFO(L"-> {} accept:{:#x}", static_cast<uint32_t>(state), Status.dwControlsAccepted);
 
     Status.dwCurrentState = (DWORD)state;
     ::SetServiceStatus(StatusHandle, &Status);

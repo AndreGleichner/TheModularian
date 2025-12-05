@@ -38,7 +38,7 @@
 #undef CreateDirectory
 #undef RemoveDirectory
 #undef CreateFile
-#undef DeleteFile
+//#undef DeleteFile
 #undef SearchPath
 #undef CopyFile
 #undef MoveFile
